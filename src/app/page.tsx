@@ -1,3 +1,4 @@
+import Actions from "@/components/Actions";
 import MechBuilder from "@/components/MechBuilder";
 import Rules from "@/components/Rules";
 import SomethingExciting from "@/components/SomethingExciting";
@@ -8,10 +9,11 @@ export default function Home() {
     <main className="min-h-screen max-w-4xl mx-auto flex flex-col">
       <Tabs defaultValue="rules" className="flex-1 flex flex-col">
         {/* Tab Navigation */}
-        <TabsList className="grid grid-cols-3 py-4">
+        <TabsList className="grid grid-cols-2 md:grid-cols-4 py-4">
           <TabsTrigger value="rules">Rules</TabsTrigger>
           <TabsTrigger value="exciting">Something Exciting</TabsTrigger>
           <TabsTrigger value="mech">Mech</TabsTrigger>
+          <TabsTrigger value="actions">Actions</TabsTrigger>
         </TabsList>
 
         {/* Tab Content */}
@@ -31,6 +33,9 @@ export default function Home() {
 
           <TabsContent value="mech" className="h-full">
             <MechBuilder />
+          </TabsContent>
+          <TabsContent value="actions" className="h-full">
+            <Actions />
           </TabsContent>
         </div>
       </Tabs>

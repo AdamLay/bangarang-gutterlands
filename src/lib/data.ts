@@ -100,3 +100,76 @@ The player doing the bashing chooses which direction the Bot is moved.`,
     damage: 1,
   },
 ];
+
+type Action = {
+  name: string;
+  rule: string;
+};
+
+// <ul>
+//         <li>
+//           <span className="text-title">Move</span> - Move up to 4” in the direction your Bot is facing & turn
+//           up to 90 degrees, OR turn on the spot up to 90 degrees.
+//         </li>
+//         <li>
+//           <span className="text-title">Strafe</span> - Move sideways up to 3” without changing orientation.
+//         </li>
+//         <li>
+//           <span className="text-title">Backwards</span> - Bot moves up to 2” backwards and then turns up to 45
+//           degrees.
+//         </li>
+//         <li>
+//           <span className="text-title">Shoot</span> - Shoot in the direction of your Bot's front arc. Shooting
+//           generates a blast token.
+//         </li>
+//         <li>
+//           <span className="text-title">Reload/Reboot</span> - Remove one blast token from your Bot
+//         </li>
+//         <li>
+//           <span className="text-title">Bash</span> - Make a melee attack against another Bot. Bashing does not
+//           generate blast tokens. Must be in base to base contact with another Bot.
+//         </li>
+//         <li>
+//           <span className="text-title">Climb</span> - Go up any Stack your bot is in base contact with. Must
+//           be in base to base contact with a Stack in order to Climb.
+//         </li>
+//         <li>
+//           <span className="text-title">Drop</span> - Deliberately jump down any vertical distance from a Stack
+//           to avoid taking damage. Must be in base to base contact with the edge of a Stack to Drop.
+//         </li>
+//       </ul>
+
+export const actions: Action[] = [
+  {
+    name: "Move",
+    rule: `Move up to 4” in the direction your Bot is facing & turn up to 90 degrees, OR turn on the spot up to 90 degrees.`,
+  },
+  {
+    name: "Strafe",
+    rule: `Move sideways up to 3” without changing orientation.`,
+  },
+  {
+    name: "Backwards",
+    rule: `Bot moves up to 2” backwards and then turns up to 45 degrees.`,
+  },
+  {
+    name: "Shoot",
+    rule: `Shoot in the direction of your Bot's front arc. Shooting generates a blast token.`,
+  },
+  {
+    name: "Reload/Reboot",
+    rule: `Remove one blast token from your Bot.`,
+  },
+  {
+    name: "Bash",
+    rule: `Make a melee attack against another Bot. Bashing does not generate blast tokens. Must be in base to base contact with another Bot.`,
+  },
+  {
+    name: "Climb",
+    rule: `Go up any Stack your bot is in base contact with. Must be in base to base contact with a Stack in order to Climb.`,
+  },
+  {
+    name: "Drop",
+    rule: `Deliberately jump down any vertical distance from a Stack to avoid taking damage. Must be in base to base contact with the edge of a Stack to Drop.`,
+  },
+];
