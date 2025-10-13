@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { TriangleAlert } from "lucide-react";
+import { MessageCircleWarning, TriangleAlert } from "lucide-react";
 
 export default function Rules() {
   return (
@@ -64,21 +64,19 @@ export default function Rules() {
           6. You may move your bot less than the full distance in inches stated in the action you’re taking
         </li>
       </ol>
-      <h2 className="text-xl">Shooting</h2>
+      <h2 className="text-xl">Shoot / Bash</h2>
       <p>
-        Shoot at targets in Line of Sight of your bot's front arc. Determine which facing you are shooting at
-        on the enemy's Bot.
+        Determine which facing you are attacking at on the enemy's Bot by drawing a line from your Bot's front
+        arc.
       </p>
       <p>
         If your bot is one Stack or more higher than the target Bot, intervening terrain does not prevent
         shooting.
       </p>
+
       <p>
-        You may not Shoot if you have one or more Blast tokens already unless a faction rules says you may.{" "}
-      </p>
-      <p>
-        Roll a d6 & place a blast marker next to your bot. The value to hit is based on the which facing being
-        targetted:
+        Roll a d6 (& if shooting, place a blast marker next to your bot). The value to hit is based on the
+        facing being targetted. A roll of 1 always misses.
       </p>
       <table className="table">
         <tbody>
@@ -96,11 +94,19 @@ export default function Rules() {
           </tr>
         </tbody>
       </table>
-      <p>A roll of 1 always misses.</p>
-      <p>
-        If within 4” of the target Bot (and not in base to base contact with any Bot), reroll any shooting
-        attack that misses.
-      </p>
+      <div role="alert" className="alert alert-soft alert-info">
+        <MessageCircleWarning />
+        <span>
+          If within 4” of the target Bot (and not in base to base contact with any Bot), reroll any shooting
+          attack that misses.
+        </span>
+      </div>
+      <div role="alert" className="alert alert-soft alert-warning">
+        <TriangleAlert />
+        <span>
+          You may not Shoot if you have one or more Blast tokens already unless a faction rules says you may.
+        </span>
+      </div>
       <div role="alert" className="alert alert-soft alert-warning">
         <TriangleAlert />
         <span>
@@ -109,12 +115,12 @@ export default function Rules() {
         </span>
       </div>
       <p>
-        If at 1 Stack higher than the target Bot, +1 to the result you roll on your dice when firing. If at 2
-        or more Stacks higher than the target Bot, +2 to the result you roll on your dice when firing.
+        <span className="text-title">Shooting when on Stacks:</span> If at 1 Stack higher than the target Bot,
+        +1 to the result. If at 2 or more Stacks higher than the target Bot, +2 to the result.
       </p>
       <p>
         When you successfully hit a Bot you must roll an additional D6. If you roll a 5-6, something exciting
-        happens! The Player who owns the Bot that got shot at must roll on - the “Something Exciting Happens”
+        happens! The Player who owns the Bot that got hit at must roll on - the “Something Exciting Happens”
         Table
       </p>
     </div>
