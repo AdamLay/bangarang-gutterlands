@@ -1,3 +1,4 @@
+import MechBuilder from "@/components/MechBuilder";
 import Rules from "@/components/Rules";
 import SomethingExciting from "@/components/SomethingExciting";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -31,12 +32,7 @@ export default function Home() {
           </TabsContent>
 
           <TabsContent value="mech" className="h-full">
-            <div className="h-full flex items-center justify-center">
-              <div className="text-center">
-                <h2 className="text-2xl font-bold mb-4">Mech</h2>
-                <p className="text-muted-foreground">Mech content will go here</p>
-              </div>
-            </div>
+            <MechBuilder />
           </TabsContent>
         </div>
       </Tabs>
