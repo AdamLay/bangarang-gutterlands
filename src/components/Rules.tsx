@@ -4,7 +4,7 @@ import { MessageCircleWarning, TriangleAlert } from "lucide-react";
 export default function Rules() {
   return (
     <div className="flex flex-col gap-2">
-      <h2 className="text-xl">How To Play</h2>
+      <h2 className="text-2xl pt-2">How To Play</h2>
       <p>
         <span className="text-title">Rounds:</span> At the beginning of each Round, determine which order Bots
         will act in. Each player rolls a D6 and adds their remaining number of HP to the result. The Player
@@ -16,7 +16,7 @@ export default function Rules() {
         combination or in any permissible order.You may repeat actions during your turn. You have to declare
         aloud the three actions you are taking and then do them.
       </p>
-      <h2 className="text-xl">Actions</h2>
+      <h2 className="text-2xl pt-2">Actions</h2>
       <ul>
         <li>
           <span className="text-title">Move</span> - Move up to 4” in the direction your Bot is facing & turn
@@ -65,7 +65,7 @@ export default function Rules() {
           6. You may move your bot less than the full distance in inches stated in the action you’re taking
         </li>
       </ol>
-      <h2 className="text-xl">Shoot / Bash</h2>
+      <h2 className="text-2xl pt-2">Shoot / Bash</h2>
       <p>
         Determine which facing you are attacking at on the enemy's Bot by drawing a line from your Bot's front
         arc.
@@ -124,7 +124,7 @@ export default function Rules() {
         happens! The Player who owns the Bot that got hit at must roll on - the “Something Exciting Happens”
         Table
       </p>
-      <h2 className="text-xl">Climbing & Falling</h2>
+      <h2 className="text-2xl pt-2">Climbing & Falling</h2>
       <p>
         If a Bot loses any HP whilst within 1" of the edge of a Stack they Fall down it. The Player removes
         their Bot from the ledge and places them at the bottom of the Stack directly underneath where they
@@ -151,7 +151,7 @@ export default function Rules() {
         any number of Stacks (if the edges of Stacks are close enough together that a Bot could not stop at
         the intermediary levels).
       </p>
-      <h2 className="text-xl">Fall/Drop onto Bot</h2>
+      <h2 className="text-2xl pt-2">Fall/Drop onto Bot</h2>
       <p>
         A bot may Fall or Drop onto another Bot! If a Bot is within 2" of the point where a Bot would usually
         fall or drop, it may choose to land on the opponent Bot. If you do this, place your Bot in Base to
@@ -167,7 +167,7 @@ export default function Rules() {
         opponent Bot suffers all the HP you would have suffered had you fallen. In order to successfully drop
         like this, you must take a Drop Test.
       </p>
-      <h2 className="text-xl">Drop Test</h2>
+      <h2 className="text-2xl pt-2">Drop Test</h2>
       <p>Roll a D6.</p>
       <p>
         <span className="text-title">1 Fail</span> - Your Bot falls and misses completely. Counts as having
@@ -181,6 +181,28 @@ export default function Rules() {
       </p>
       <p>
         <span className="text-title">3+ Success</span> - You successfully drop.
+      </p>
+      <h2 className="text-2xl pt-8">Zero HP</h2>
+      <p>
+        When you reach 0 hit points your Bot is destroyed. Immediately roll a D6 to see what happens to your
+        Bot.
+      </p>
+      <p>
+        <span className="text-title">1-3 - Wreck</span> - sparks fly, lights dim and limbs slacken as the poor
+        Bot shuts down. The Bot becomes an obstruction for the remaining players. Mark the Bot with some
+        additional blast markers to highlight its demise.
+      </p>
+      <p>
+        <span className="text-title">4-6 - Detonation</span> - In a colossal explosion the Bot explodes! This
+        obliterates the Bot entirely and sends fragments of wreckage flying in all directions. Make a shooting
+        attack at all Bots within 12” and line of sight that causes 2 HP damage, nearest to the destroyed Bot
+        first. Remove the Bot from the board.
+      </p>
+      <p>
+        <span className="text-title">AUTO-DESTRUCT</span> - In some desperate situations a Bot may find it
+        nearly impossible to inflict damage on its opponents, such as after suffering multiple weapon
+        failures. In situtions such as this where victory is impossible, a Bot may elect to auto-destruct.
+        Proceed as if detonating, as above.
       </p>
     </div>
   );
