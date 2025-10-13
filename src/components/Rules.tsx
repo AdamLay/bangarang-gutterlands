@@ -7,7 +7,7 @@ export default function Rules() {
       <h2 className="text-xl">How To Play</h2>
       <p>
         <span className="text-title">Rounds:</span> At the beginning of each Round, determine which order Bots
-        will act in. Each player rolls a d6 and adds their remaining number of HP to the result. The Player
+        will act in. Each player rolls a D6 and adds their remaining number of HP to the result. The Player
         with the lowest score goes first, and play proceeds around the table in the direction of the player
         with the second lowest score.
       </p>
@@ -23,29 +23,30 @@ export default function Rules() {
           up to 90 degrees, OR turn on the spot up to 90 degrees.
         </li>
         <li>
-          <span className="text-title">Strafe</span> - Move sideways up to 3” without changing orientation
-          (tactical, good for poking round corners)
+          <span className="text-title">Strafe</span> - Move sideways up to 3” without changing orientation.
         </li>
         <li>
           <span className="text-title">Backwards</span> - Bot moves up to 2” backwards and then turns up to 45
-          degrees. Shoot - shoot in the direction of your Bot's front arc. Shooting generates a blast token
-          (see “Shooting”)
+          degrees.
+        </li>
+        <li>
+          <span className="text-title">Shoot</span> - Shoot in the direction of your Bot's front arc. Shooting
+          generates a blast token.
         </li>
         <li>
           <span className="text-title">Reload/Reboot</span> - Remove one blast token from your Bot
         </li>
         <li>
           <span className="text-title">Bash</span> - Make a melee attack against another Bot. Bashing does not
-          generate blast tokens (see “Bashing”). Must be in base to base contact with another Bot.
+          generate blast tokens. Must be in base to base contact with another Bot.
         </li>
         <li>
-          <span className="text-title">Climb</span> - Go up any Stack your bot is in base contact with (see
-          “climbing and falling”). Must be in base to base contact with a Stack in order to Climb.
+          <span className="text-title">Climb</span> - Go up any Stack your bot is in base contact with. Must
+          be in base to base contact with a Stack in order to Climb.
         </li>
         <li>
           <span className="text-title">Drop</span> - Deliberately jump down any vertical distance from a Stack
-          to avoid taking damage (see “climbing and falling”). Must be in base to base contact with the edge
-          of a Stack to Drop.
+          to avoid taking damage. Must be in base to base contact with the edge of a Stack to Drop.
         </li>
       </ul>
       <ol>
@@ -75,7 +76,7 @@ export default function Rules() {
       </p>
 
       <p>
-        Roll a d6 (& if shooting, place a blast marker next to your bot). The value to hit is based on the
+        Roll a D6 (& if shooting, place a blast marker next to your bot). The value to hit is based on the
         facing being targetted. A roll of 1 always misses.
       </p>
       <table className="table">
@@ -122,6 +123,64 @@ export default function Rules() {
         When you successfully hit a Bot you must roll an additional D6. If you roll a 5-6, something exciting
         happens! The Player who owns the Bot that got hit at must roll on - the “Something Exciting Happens”
         Table
+      </p>
+      <h2 className="text-xl">Climbing & Falling</h2>
+      <p>
+        If a Bot loses any HP whilst within 1" of the edge of a Stack they Fall down it. The Player removes
+        their Bot from the ledge and places them at the bottom of the Stack directly underneath where they
+        fell, so that they are touching the Stack. Bots falling off Bridges go straight down.
+      </p>
+      <p>
+        The Bot suffers additional HP lost equal to 2 HP per level of Stack it Fell. This also occurs if they
+        move off an edge without making a Drop action.
+      </p>
+      <p>
+        To perform a Climb action, a bot must be in Base-to-Base contact with a Stack. You do not need to be
+        facing the stack. The action then moves it to the top of the Stack, and your place your Bot facing any
+        direction at the top.
+      </p>
+      <p>
+        If 2 Stacks are placed in a way so that their faces are aligned and it creates a double height
+        obstacle, the Bot must make successive climb actions. If a Bot falls off a double height Stack, but
+        there is not enough room to place it where it fell on the lower Stack, it must fall to the next level.
+      </p>
+      <p>
+        A Bot May make a Drop action to get down safely. A Bot must be in base to base contact with an edge of
+        a Stack or a bridge. It then drops down and can be placed facing any direction at the bottom in base
+        to base contact with the point where it dropped. Unlike climbing, the dropping action can drop a bot
+        any number of Stacks (if the edges of Stacks are close enough together that a Bot could not stop at
+        the intermediary levels).
+      </p>
+      <h2 className="text-xl">Fall/Drop onto Bot</h2>
+      <p>
+        A bot may Fall or Drop onto another Bot! If a Bot is within 2" of the point where a Bot would usually
+        fall or drop, it may choose to land on the opponent Bot. If you do this, place your Bot in Base to
+        Base contact with the opponent's Bot anywhere you like. Your Bot may be facing any direction you wish.
+      </p>
+      <p>
+        <span className="text-title">Fall</span> - If you fall onto an opponent's bot, calculate the number of
+        HP you would have lost if falling usually. Half that number and round up. Your Bot and the opponent's
+        Bot both lose that number of HP.
+      </p>
+      <p>
+        <span className="text-title">Drop</span> - If you deliberately drop onto an opponent's Bot, the
+        opponent Bot suffers all the HP you would have suffered had you fallen. In order to successfully drop
+        like this, you must take a Drop Test.
+      </p>
+      <h2 className="text-xl">Drop Test</h2>
+      <p>Roll a D6.</p>
+      <p>
+        <span className="text-title">1 Fail</span> - Your Bot falls and misses completely. Counts as having
+        fallen and is placed adjacent to the target Bot in Base-to-Base contact. Your bot suffers fall damage
+        as usual.
+      </p>
+      <p>
+        <span className="text-title">2 Partial Fail</span> - Your Bot falls onto the target Bot. Counts as
+        having fallen and is placed adjacent to the target Bot in Base-to-Base contact. Calculate damage as
+        you would for falling onto a Bot.
+      </p>
+      <p>
+        <span className="text-title">3+ Success</span> - You successfully drop.
       </p>
     </div>
   );
