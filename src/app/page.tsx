@@ -5,16 +5,14 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 export default function Home() {
   return (
-    <main className="min-h-screen max-w-2xl mx-auto flex flex-col">
+    <main className="min-h-screen max-w-4xl mx-auto flex flex-col">
       <Tabs defaultValue="rules" className="flex-1 flex flex-col">
         {/* Tab Navigation */}
-        <div className="flex justify-center p-4">
-          <TabsList className="grid grid-cols-3">
-            <TabsTrigger value="rules">Rules</TabsTrigger>
-            <TabsTrigger value="exciting">Something Exciting</TabsTrigger>
-            <TabsTrigger value="mech">Mech</TabsTrigger>
-          </TabsList>
-        </div>
+        <TabsList className="grid grid-cols-3 py-4">
+          <TabsTrigger value="rules">Rules</TabsTrigger>
+          <TabsTrigger value="exciting">Something Exciting</TabsTrigger>
+          <TabsTrigger value="mech">Mech</TabsTrigger>
+        </TabsList>
 
         {/* Tab Content */}
         <div className="flex-1 p-4">
