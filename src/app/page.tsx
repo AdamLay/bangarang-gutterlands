@@ -11,7 +11,7 @@ export default function Home() {
         {/* Tab Navigation */}
         <TabsList className="grid grid-cols-2 md:grid-cols-4 py-4">
           <TabsTrigger value="rules">Rules</TabsTrigger>
-          <TabsTrigger value="exciting">Something Exciting</TabsTrigger>
+          <TabsTrigger value="exciting">Sm. Exciting</TabsTrigger>
           <TabsTrigger value="mech">Mech</TabsTrigger>
           <TabsTrigger value="actions">Actions</TabsTrigger>
         </TabsList>
